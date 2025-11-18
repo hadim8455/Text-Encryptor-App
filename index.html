@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -29,4 +29,47 @@
 
   <script src="script.js"></script>
 </body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Encryption Tool</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsencrypt/3.3.0/jsencrypt.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/elliptic@6.5.4/dist/elliptic.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 Encryption Tool</h1>
+
+    <textarea id="inputText" placeholder="Enter your text here..."></textarea>
+    <input type="password" id="keyInput" placeholder="Enter secret key (for symmetric)" />
+
+    <div class="btn-group">
+      <button id="aesEncryptBtn">AES Encrypt</button>
+      <button id="aesDecryptBtn">AES Decrypt</button>
+      <button id="chachaEncryptBtn">ChaCha20 Encrypt</button>
+      <button id="chachaDecryptBtn">ChaCha20 Decrypt</button>
+      <button id="goToRSA">Go to RSA Encryption</button>
+
+      
+      <button id="clearBtn">Clear</button>
+    </div>
+
+    <textarea id="outputText" placeholder="Result will appear here..." readonly></textarea>
+
+    <div class="copy-section">
+      <button id="copyBtn">Copy Result</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
+

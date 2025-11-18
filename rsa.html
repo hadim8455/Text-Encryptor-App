@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSA Encryption Tool</title>
+    <link rel="stylesheet" href="rsa.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsencrypt/3.3.0/jsencrypt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>🔐 RSA Encryption Tool</h1>
+
+      <textarea id="inputText" placeholder="Enter text here..."></textarea>
+
+            <div class="btn-group">
+                <button id="generateKeys">Generate Keys</button>
+                <button id="encryptBtn">Encrypt</button>
+                <button id="decryptBtn">Decrypt</button>
+                <button id="clearBtn">Clear All</button>
+                <button id="backToAES">Back to AES Encryption</button>
+
+            </div>
+
+            <div class="key-section">
+                <label>Public Key:</label>
+                <div class="key-box">
+                <textarea id="publicKey"></textarea>
+                <button class="copy-btn" data-copy="publicKey">📋 Copy</button>
+                </div>
+
+                <label>Private Key:</label>
+                <div class="key-box">
+                <textarea id="privateKey"></textarea>
+                <button class="copy-btn" data-copy="privateKey">📋 Copy</button>
+                </div>
+            </div>
+
+      <label>Output / Result:</label>
+      <div class="key-box">
+        <textarea
+          id="outputText"
+          placeholder="Encrypted / Decrypted text..."
+          readonly></textarea>
+        <button class="copy-btn" data-copy="outputText">📋 Copy</button>
+      </div>
+    </div>
+
+    <script src="rsa.js"></script>
+  </body>
+</html>

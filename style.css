@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -19,13 +19,13 @@ body {
   padding: 30px;
   border-radius: 16px;
   width: 90%;
-  max-width: 600px;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  max-width: 500px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
   text-align: center;
 }
 
 h1 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 20px;
   color: #00ffff;
 }
@@ -45,13 +45,14 @@ textarea, input {
 
 .btn-group {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 10px;
   margin-top: 10px;
+  justify-content: space-between;
 }
 
 button {
-  flex: 1;
+  flex: 1 1 45%;
   padding: 10px;
   border: none;
   border-radius: 8px;
@@ -59,33 +60,34 @@ button {
   font-size: 1rem;
   font-weight: bold;
   transition: all 0.3s ease;
-}
-
-#encryptBtn {
-  background: #238636;
   color: white;
 }
 
-#decryptBtn {
-  background: #1f6feb;
-  color: white;
-}
+/* Button Colors */
+#aesEncryptBtn, #aesDecryptBtn { background: #238636; }   /* Green */
+#chachaEncryptBtn, #chachaDecryptBtn { background: #ff9900; } /* Orange */
+#goToRSA { background: #1f6feb; }  /* Blue for RSA button */
 
-#clearBtn {
-  background: #f85149;
-  color: white;
-}
+#clearBtn { background: #f85149; }  /* Red */
 
 button:hover {
-  opacity: 0.9;
+  opacity: 0.85;
 }
 
 .copy-section {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 #copyBtn {
-  background: #6e40c9;
+  background: #00bfff;
   color: white;
   width: 100%;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+#copyBtn:hover {
+  opacity: 0.85;
 }
